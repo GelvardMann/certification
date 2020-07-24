@@ -1,7 +1,7 @@
 # ignore generated files
-/app/public/index.php
-/app/public/index-test.php
-/app/public/robots.txt
-/app/public/admin/index.php
-/app/public/admin/index-test.php
-/app/public/admin/robots.txt
+index.php
+index-test.php
+robots.txt
+/admin/index.php
+/admin/index-test.php
+/admin/robots.txt
