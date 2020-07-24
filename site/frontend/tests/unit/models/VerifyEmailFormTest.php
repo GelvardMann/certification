@@ -3,7 +3,7 @@
 namespace frontend\tests\unit\models;
 
 use common\fixtures\UserFixture;
-use frontend\models\VerifyEmailForm;
+use common\modules\user\models\VerifyEmailForm;
 
 class VerifyEmailFormTest extends \Codeception\Test\Unit
 {
@@ -26,30 +26,30 @@ class VerifyEmailFormTest extends \Codeception\Test\Unit
     public function testVerifyWrongToken()
     {
         $this->tester->expectException('\yii\base\InvalidArgumentException', function() {
-            new VerifyEmailForm('');
+            new \common\modules\user\models\VerifyEmailForm('');
         });
 
         $this->tester->expectException('\yii\base\InvalidArgumentException', function() {
-            new VerifyEmailForm('notexistingtoken_1391882543');
+            new \common\modules\user\models\VerifyEmailForm('notexistingtoken_1391882543');
         });
     }
 
     public function testAlreadyActivatedToken()
     {
         $this->tester->expectException('\yii\base\InvalidArgumentException', function() {
-            new VerifyEmailForm('already_used_token_1548675330');
+            new \common\modules\user\models\VerifyEmailForm('already_used_token_1548675330');
         });
     }
 
     public function testVerifyCorrectToken()
     {
-        $model = new VerifyEmailForm('4ch0qbfhvWwkcuWqjN8SWRq72SOw1KYT_1548675330');
+        $model = new \common\modules\user\models\VerifyEmailForm('4ch0qbfhvWwkcuWqjN8SWRq72SOw1KYT_1548675330');
         $user = $model->verifyEmail();
-        expect($user)->isInstanceOf('common\models\User');
+        expect($user)->isInstanceOf('common\modules\user\models\User');
 
         expect($user->username)->equals('test.test');
         expect($user->email)->equals('test@mail.com');
-        expect($user->status)->equals(\common\models\User::STATUS_ACTIVE);
+        expect($user->status)->equals(\common\modules\user\models\User::STATUS_ACTIVE);
         expect($user->validatePassword('Test1234'))->true();
     }
 }

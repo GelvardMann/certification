@@ -5,7 +5,7 @@ namespace frontend\tests\unit\models;
 
 use Codeception\Test\Unit;
 use common\fixtures\UserFixture;
-use frontend\models\ResendVerificationEmailForm;
+use common\modules\user\models\ResendVerificationEmailForm;
 
 class ResendVerificationEmailFormTest extends Unit
 {
@@ -27,7 +27,7 @@ class ResendVerificationEmailFormTest extends Unit
 
     public function testWrongEmailAddress()
     {
-        $model = new ResendVerificationEmailForm();
+        $model = new \common\modules\user\models\ResendVerificationEmailForm();
         $model->attributes = [
             'email' => 'aaa@bbb.cc'
         ];
