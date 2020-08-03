@@ -3,7 +3,7 @@
 namespace frontend\tests\unit\models;
 
 use common\fixtures\UserFixture;
-use frontend\models\ResetPasswordForm;
+use common\modules\user\models\ResetPasswordForm;
 
 class ResetPasswordFormTest extends \Codeception\Test\Unit
 {
@@ -37,7 +37,7 @@ class ResetPasswordFormTest extends \Codeception\Test\Unit
     public function testResetCorrectToken()
     {
         $user = $this->tester->grabFixture('user', 0);
-        $form = new ResetPasswordForm($user['password_reset_token']);
+        $form = new \common\modules\user\models\ResetPasswordForm($user['password_reset_token']);
         expect_that($form->resetPassword());
     }
 
