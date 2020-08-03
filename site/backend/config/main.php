@@ -19,6 +19,7 @@ return [
         'user' => [
             'identityClass' => 'common\modules\user\models\User',
             'enableAutoLogin' => true,
+            'loginUrl' => ['user/login'],
             'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
         ],
         'session' => [
