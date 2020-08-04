@@ -11,7 +11,7 @@ class Bootstrap implements BootstrapInterface
     {
         $app->getUrlManager()->addRules(
             [
-                '<module:user>/<action:login|logout|signup|request-password-reset|reset-password|verify-email|resend-verification-email>' => 'user/default/<action>',
+                '<module:user>/<action:login|logout|signup|request-password-reset|reset-password|verify-email|resend-verification-email>' => '<module>/default/<action>',
             ]
         );
     }
