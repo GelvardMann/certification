@@ -37,21 +37,21 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
                 <div class="col-sm-4">
                     <?php if (!empty($model->image)) : ?>
-                        <a href="<?= Url::to('/profile/upload/') ?>">
-                            <?= \yii\helpers\Html::img(Url::to('@uploads/images/' . $model->user_id . '/' . $model->image),
-                                [
-                                    'alt' => 'Image not found',
-                                    'class' => 'profile-photo'
-                                ]) ?>
-                        </a>
+<!--                        <a href="--><?//= Url::to('/profile/upload/') ?><!--">-->
+<!--                            --><?//= \yii\helpers\Html::img(Url::to('@uploads/images/' . $model->user_id . '/' . $model->image),
+//                                [
+//                                    'alt' => 'Image not found',
+//                                    'class' => 'profile-photo'
+//                                ]) ?>
+<!--                        </a>-->
                     <?php else : ?>
-                        <a href="<?= Url::to('/profile/upload/') ?>">
-                            <?= \yii\helpers\Html::img(Url::to('@frontend/uploads/images/noImage.jpg'),
-                                [
-                                    'alt' => 'Image not found',
-                                    'class' => 'profile-photo'
-                                ]) ?>
-                        </a>
+<!--                        <a href="--><?//= Url::to('/profile/upload/') ?><!--">-->
+<!--                            --><?//= \yii\helpers\Html::img(Url::to('@frontend/uploads/images/noImage.jpg'),
+//                                [
+//                                    'alt' => 'Image not found',
+//                                    'class' => 'profile-photo'
+//                                ]) ?>
+<!--                        </a>-->
                     <?php endif; ?>
                 </div>
             </div>

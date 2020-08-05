@@ -42,8 +42,9 @@ class Profiles extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['user_id', 'email', 'created_at', 'updated_at'], 'required'],
-            [['user_id', 'created_at', 'updated_at'], 'integer'],
+            [['user_id', 'email'], 'required'],
+            [['user_id'], 'integer'],
+            [['created_at', 'updated_at'], 'safe'],
             [['email', 'surname', 'name', 'middle_name', 'image'], 'string', 'max' => 255],
             [['email'], 'unique'],
         ];
