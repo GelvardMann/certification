@@ -1,6 +1,7 @@
 <?php
 
 /* @var $this \yii\web\View */
+
 /* @var $content string */
 
 use yii\helpers\Html;
@@ -44,14 +45,13 @@ AppAsset::register($this);
         $menuItems[] = ['label' => Yii::t('app', 'signup'), 'url' => ['/user/default/signup']];
         $menuItems[] = ['label' => Yii::t('app', 'login'), 'url' => ['/user/default/login']];
     } else {
-        $menuItems[] = '<li>'
-            . Html::beginForm(['/site/logout'], 'post')
-            . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
-                ['class' => 'btn btn-link logout']
-            )
-            . Html::endForm()
-            . '</li>';
+        $menuItems[] = ['label' => Yii::$app->user->identity->username,
+            'items' => [
+                ['label' => Yii::t('app', 'profile'), 'url' => '/user/profiles'],
+                ['label' => Yii::t('app', 'logout'), 'url' => ['/user/logout'], 'linkOptions' => ['data-method' => 'post']],
+
+
+            ]];
     }
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],

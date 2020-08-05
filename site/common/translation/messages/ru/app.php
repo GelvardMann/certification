@@ -22,8 +22,10 @@ return [
     'username' => 'Логин',
     'rememberMe' => 'Запомнить меня',
     'password' => 'Пароль',
+    'profile' => 'Личный кабинет',
+    'logout' => 'Выйти',
 
-    // login model
+    // signup model
     'signup-message' => 'Пожалуйста, заполните следующие поля для регистрации:',
 
     // request password reset token
@@ -31,7 +33,7 @@ return [
     'request password reset' => 'Cброс пароля',
 
     // Resend verification email model
-    'resend-verification-email-message'=>'Пожалуйста, заполните вашу электронную почту. На неё будет отправлено письмо с подтверждением.',
+    'resend-verification-email-message' => 'Пожалуйста, заполните вашу электронную почту. На неё будет отправлено письмо с подтверждением.',
     'resend verification email' => 'Отправить письмо с подтверждением.',
     'there is no user with this email address' => 'Нет пользователя с этим адресом электронной почты.',
 
@@ -49,4 +51,17 @@ return [
     'email' => 'Электронная почта',
     'subject' => 'Тема',
     'body' => 'Ваше сообщение',
+
+    // Attribute labels profiles
+    'id' => 'ID',
+    'user id' => 'ID пользователя',
+    'surname' => 'Фамилия',
+    'middle name' => 'Отчество',
+    'image' => 'Фото',
+    'created at' => 'Создан',
+    'updated at' => 'Обновлен',
+
+    // Profiles form
+    'create profiles' => 'Создание профиля',
+    'profiles' => 'Профиль',
 ];

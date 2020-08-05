@@ -15,11 +15,13 @@ return [
     'login-message' => 'Please fill out the following fields to login:',
     'login-forgot-message' => 'If you forgot your password you can',
     'reset it' => 'reset it',
-    'need new verification email'=> 'Need new verification email?',
+    'need new verification email' => 'Need new verification email?',
     'resend' => 'Resend',
     'username' => 'Username',
     'rememberMe' => 'Remember me',
     'password' => 'Password',
+    'profile' => 'Profile',
+    'logout' => 'Logout',
 
     // signup model
     'signup-message' => 'Please fill out the following fields to signup:',
@@ -29,7 +31,7 @@ return [
     'request password reset' => 'Request password reset',
 
     // Resend verification email model
-    'resend-verification-email-message'=>'Please fill out your email. A verification email will be sent there.',
+    'resend-verification-email-message' => 'Please fill out your email. A verification email will be sent there.',
     'resend verification email' => 'Resend verification email',
     'there is no user with this email address' => 'There is no user with this email address.',
 
@@ -49,4 +51,16 @@ return [
     'subject' => 'Subject',
     'body' => 'Body',
 
+    // Attribute labels profiles
+    'id' => 'ID',
+    'user id' => 'User ID',
+    'surname' => 'Surname',
+    'middle name' => 'Middle Name',
+    'image' => 'Avatar',
+    'created at' => 'Created at',
+    'update at' => 'Update at',
+
+    // Profiles form
+    'create profiles' => 'Create Profile',
+    'profiles' => 'Profile',
 ];
