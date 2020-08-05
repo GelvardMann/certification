@@ -36,13 +36,13 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => Yii::t('app', 'Home'), 'url' => ['/site/index']],
-        ['label' => Yii::t('app', 'About'), 'url' => ['/site/about']],
-        ['label' => Yii::t('app', 'Contact'), 'url' => ['/site/contact']],
+        ['label' => Yii::t('app', 'home'), 'url' => ['/site/index']],
+        ['label' => Yii::t('app', 'about'), 'url' => ['/site/about']],
+        ['label' => Yii::t('app', 'contact'), 'url' => ['/site/contact']],
     ];
     if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => Yii::t('app', 'Signup'), 'url' => ['/user/default/signup']];
-        $menuItems[] = ['label' => Yii::t('app', 'Login'), 'url' => ['/user/default/login']];
+        $menuItems[] = ['label' => Yii::t('app', 'signup'), 'url' => ['/user/default/signup']];
+        $menuItems[] = ['label' => Yii::t('app', 'login'), 'url' => ['/user/default/login']];
     } else {
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')

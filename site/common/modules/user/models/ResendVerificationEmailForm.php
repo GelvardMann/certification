@@ -27,10 +27,11 @@ class ResendVerificationEmailForm extends Model
             ['email', 'exist',
                 'targetClass' => '\common\modules\user\models\User',
                 'filter' => ['status' => \common\modules\user\models\User::STATUS_INACTIVE],
-                'message' => 'There is no user with this email address.'
+                'message' => Yii::t('app','there is no user with this email address'),
             ],
         ];
     }
+
 
     /**
      * Sends confirmation email to user

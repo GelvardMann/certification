@@ -13,5 +13,5 @@ $this->title = $name;
 
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <?= Html::a(Yii::t('app', 'Home'), '/', ['class'=>'btn btn-default btn-lg'])?>
+    <?= Html::a(Yii::t('app', 'home'), '/', ['class'=>'btn btn-default btn-lg'])?>
 </div>
